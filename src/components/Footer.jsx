@@ -1,9 +1,9 @@
 export default function Footer() {
     return (
      <div>
-     <div className="bg-[#5d0008] hidden md:flex justify-between h-40">
-    <div className="flex flex-col">
-      <div className="flex flex-col md:flex-row justify-between text-white gap-6 md:gap-8 lg:gap-32 px-6 lg:px-24 py-4 tracking-wider">
+     <div className="bg-[#5d0008] hidden md:flex justify-between ">
+    <div className="flex flex-col gap-5">
+      <div className="flex flex-col md:flex-row justify-between text-white gap-6 md:gap-8 2xl:gap-32 px-6 xl:px-24 py-4 tracking-wider">
         <div className="flex items-start gap-2">
           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 stroke-white mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -27,7 +27,7 @@ export default function Footer() {
           <p className="text-sm sm:text-base md:text-lg lg:text-xl">+91 8005688733</p>
         </div>
       </div>
-      <div className="px-6 pt-8 pl-[450px] lg:pl-[600px] text-white text-sm sm:text-base ">
+      <div className="px-6 pb-6 md:pl-40 lg:pl-72 xl:pl-[500px] 2xl:pl-[600px] text-white text-sm sm:text-base ">
         <p className="">
           © 2025 MillenialRK. All Rights Reserved
         </p>

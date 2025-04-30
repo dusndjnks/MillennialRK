@@ -10,20 +10,20 @@ export default function Navbar() {
     { label: 'Home', to: '/' },
     { label: 'Services', to: '/services' },
     { label: 'Gallery', to: '/gallery' },
-    { label: 'Contact', to: '/contact' },
+    { label: 'Contact Us', to: '/contact' },
   ];
 
 
   return (
-    <div className="bg-[#252323] text-white z-50">
+    <div className="bg-[#1B1A1A] text-white z-50 font-montserrat">
       <nav className="flex justify-between items-center py-6 px-6 md:px-20">
-        <NavLink to="/" className="text-red-600 font-bold text-2xl md:text-3xl tracking-tighter font-[sans-serif]">
+        <NavLink to="/" className="text-red-700 font-bold text-2xl md:text-3xl tracking-tighter font-font-montserrat">
           MILLENNIAL
-          <span className="bg-red-600 text-[#1c1b1b] px-1 ml-1">RK</span>
+          <span className="bg-red-700 text-[#1B1A1A] px-1 ml-1">RK</span>
         </NavLink>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex gap-6 text-lg md:text-2xl font-thin">
+        <ul className="hidden md:flex gap-6 text-lg font-montserrat md:text-2xl font-thin">
           {navItems.map(({ label, to }) => (
             <li key={label}>
               <NavLink
@@ -58,7 +58,7 @@ export default function Navbar() {
               <NavLink
                 to={to}
                 className={({ isActive }) =>
-                  `transition duration-300 hover:text-red-500 ${
+                  `transition duration-300 hover:text-[#5A0006] ${
                     isActive ? 'text-red-500 font-medium' : ''
                   }`
                 }

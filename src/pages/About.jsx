@@ -1,11 +1,12 @@
 import React from 'react'
 import UnderConstruction from '../components/UnderConstruction'
+import Layout from '../components/Layout'
 
 const About = () => {
   return (
-    <div>
+   <Layout>
         <UnderConstruction/>
-    </div>
+   </Layout>
   )
 }
 
