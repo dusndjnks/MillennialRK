@@ -1,4 +1,3 @@
-import React from 'react'
 import Layout from '../components/Layout'
 import { useState , useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
