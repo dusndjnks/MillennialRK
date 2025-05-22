@@ -5,6 +5,8 @@ import { FaUser, FaEnvelope, FaPenFancy } from "react-icons/fa";
 import AOS from 'aos'
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Contact = () => {
@@ -14,22 +16,30 @@ const Contact = () => {
   }, []);
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    const form = e.target;
+  e.preventDefault();
+  const form = e.target;
 
-    const formData = {
-      name: form.name.value,
-      email: form.email.value,
-      description: form.description.value,
-    };
-
-    fetch("https://script.google.com/macros/s/AKfycbwFTmXONJr_6NIAAQPlsIhrxRIMIoiPFnQKUCEFRILoil2zkWGx6hGpSjZsXH_85Aw/exec", {
-      method: "POST",
-      body: JSON.stringify(formData),
-    })
-      .then(() => alert("Submitted!"))  
-      .catch(() => alert("Failed to submit"));
+  const formData = {
+    name: form.name.value,
+    email: form.email.value,
+    description: form.description.value,
   };
+
+  fetch("https://script.google.com/macros/s/AKfycbwFTmXONJr_6NIAAQPlsIhrxRIMIoiPFnQKUCEFRILoil2zkWGx6hGpSjZsXH_85Aw/exec", {
+    method: "POST",
+    body: JSON.stringify(formData),
+  })
+    .then((res) => {
+      if (res.ok) {
+        toast.success("✅ Message sent successfully!");
+        form.reset();
+      } else {
+        toast.error("❌ Failed to send message.");
+      }
+    })
+    .catch(() => toast.error("❌ Something went wrong."));
+};
+
 
   return (
     <Layout>
@@ -37,8 +47,8 @@ const Contact = () => {
         <div class="relative w-full h-[300px] md:h-[400px] lg:h-[500px] overflow-hidden">
           <img src={contact1} alt="Background" class="w-full h-full object-cover "/>
           <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-center px-4">
-            <h1 class="text-center text-white text-2xl md:text-3xl xl:text-7xl font-montez">Contact Us</h1>
-            <p class="text-base text-white sm:text-xl lg:text-2xl xl:text-2xl font-montez ">Let's work together — contact us now.</p>
+            <h1 class="text-center text-white text-5xl md:text-6xl xl:text-7xl font-montez">Contact Us</h1>
+            <p class="text-lg text-white sm:text-xl lg:text-3xl xl:text-4xl font-montez ">Let's work together — contact us now.</p>
           </div>
         </div>
 
@@ -134,6 +144,8 @@ const Contact = () => {
         </div>
       </div>
     </div>
+
+          <ToastContainer position="top-center" autoClose={3000} />
 
     </Layout>
   )
