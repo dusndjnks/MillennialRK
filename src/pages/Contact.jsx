@@ -56,15 +56,17 @@ const Contact = () => {
          <div class="w-full bg-[#1c1b1b] px-4">
             <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center text-white">
 
-              <div class="flex flex-col items-center">
+             <a href="tel:+918005688733">
+               <div class="flex flex-col items-center">
           <svg class="w-8 h-8 text-red-500 mb-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round"
               d="M3 5a2 2 0 012-2h2.586a1 1 0 01.707.293l2.828 2.828a1 1 0 010 1.414l-1.586 1.586a16.001 16.001 0 006.586 6.586l1.586-1.586a1 1 0 011.414 0l2.828 2.828a1 1 0 01.293.707V19a2 2 0 01-2 2h-1c-8.284 0-15-6.716-15-15V5z" />
           </svg>
 
                 <h3 class="text-lg font-semibold">Phone</h3>
-                <p class="text-sm mt-1">+1 (234) 567-8901</p>
+                <p class="text-sm mt-1 hover:underline">+91 8005688733</p>
               </div>
+             </a>
 
               <div class="flex flex-col items-center">
                 <svg class="w-8 h-8 text-red-500 mb-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
