@@ -72,7 +72,7 @@ const Home = () => {
 
         <div className="bg-[#1c1b1b] py-16 lg:pt-24 lg:py-24 px-5 flex justify-center">
           <div className="w-full max-w-[1100px] md:px-10 lg:px-16">
-            <h2 className="text-center text-white text-2xl md:text-3xl font-montez mb-8">
+            <h2 className="text-center text-white text-2xl md:text-3xl xl:text-5xl font-montez mb-8">
               Make your each moment memorable
             </h2>
             <div className="flex flex-wrap md:flex-nowrap bg-white shadow-lg rounded-lg overflow-hidden">
